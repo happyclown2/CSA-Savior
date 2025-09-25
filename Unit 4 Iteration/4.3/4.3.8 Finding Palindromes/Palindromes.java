@@ -32,7 +32,9 @@ public class Palindromes
     {
         // Your code goes here!
         String reversed = reverse(text);
-        if (reversed.equals(text)) return true;
+        if (reversed.equals(text)){
+            return true;
+        } 
         return false;
     }
     
@@ -46,10 +48,9 @@ public class Palindromes
     {
         // Your code goes here!
         String output = "";
-        for (int i = 0; i < text.length(); i++)
-        {
-            char ch = text.charAt(i);
-            output = ch + output;
+        for(int i = 0; i < text.length(); i++){
+            char at = text.charAt(text.length() - i - 1);
+            output += at;
         }
         return output;
     }
